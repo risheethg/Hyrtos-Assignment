@@ -4,16 +4,16 @@
 
 This project implements an intelligent agent that answers natural language queries about Singapore public transport using real-time data from LTA DataMall APIs. The agent is built with LangGraph for workflow orchestration and uses a clean layered backend architecture with FastAPI.
 
-## 🎯 Project Overview
+## Project Overview
 
 ### What Does This Do?
 
 The agent can handle various transport-related queries with contextual awareness:
 
-- 🚌 **Bus Arrivals**: "When is the next bus 190 arriving at Clementi MRT?"
-- 🔍 **Stop Search**: "Where can I find bus stops near Marina Bay Sands?"
-- 🚦 **Traffic Info**: "What's the traffic like on Orchard Road right now?"
-- 🗺️ **Route Planning**: "How do I get from Punggol to NUS?"
+- **Bus Arrivals**: "When is the next bus 190 arriving at Clementi MRT?"
+- **Stop Search**: "Where can I find bus stops near Marina Bay Sands?"
+- **Traffic Info**: "What's the traffic like on Orchard Road right now?"
+- **Route Planning**: "How do I get from Punggol to NUS?"
 
 ### Key Features
 
@@ -22,7 +22,7 @@ The agent can handle various transport-related queries with contextual awareness
 - **Production-Ready**: Clean layered architecture suitable for deployment
 - **Real-Time Data**: Integrates with LTA DataMall APIs for live transport information
 
-## 🏗️ Architecture
+## Architecture
 
 ### Layered Backend Structure
 
@@ -60,7 +60,7 @@ Final Answer
 - **Validation**: Pydantic for request/response schemas
 - **Async**: httpx for asynchronous API calls
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -126,7 +126,7 @@ Then access:
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-## 📖 Usage Examples
+## Usage Examples
 
 ### Using the Jupyter Notebook
 
@@ -177,7 +177,7 @@ result = await agent.query(
 print(result["answer"])
 ```
 
-## 🧪 Testing
+## Testing
 
 The Jupyter notebook includes comprehensive testing with 10 diverse scenarios covering:
 
@@ -199,7 +199,7 @@ Each test includes:
 - API responses
 - Natural language answers
 
-## 🎨 Design Decisions
+## Design Decisions
 
 ### 1. Workflow Design
 
@@ -252,7 +252,7 @@ This allows responses like:
 - Comprehensive logging for debugging
 - Fallback responses when LLM fails
 
-## 🚀 Deployment Strategy
+## Deployment Strategy
 
 ### Production Deployment
 
@@ -398,7 +398,7 @@ jobs:
 - **Throughput**: 1000 req/sec
 - **Error Rate**: < 0.1%
 
-## 📊 Evaluation Criteria Coverage
+## Evaluation Criteria Coverage
 
 ### 1. Agentic Workflow Design ✅
 
@@ -442,7 +442,7 @@ The simulation includes diverse contexts:
 - Cost optimization strategies
 - CI/CD pipeline design
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -472,7 +472,7 @@ Enable detailed logging:
 DEBUG = True
 ```
 
-## 📝 Key Assumptions
+## Key Assumptions
 
 1. **Valid API Access**: LTA DataMall API key is valid and active
 2. **LLM Availability**: Google Gemini API (or alternative) is accessible
@@ -480,7 +480,7 @@ DEBUG = True
 4. **Context Format**: Context is provided in structured format
 5. **English Language**: Queries are in English
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 1. **Multi-Modal Transport**: Add MRT, trains, taxis
 2. **Route Optimization**: Implement shortest path algorithms
@@ -491,11 +491,11 @@ DEBUG = True
 7. **Mobile App**: Native iOS/Android apps
 8. **Push Notifications**: Service alerts and delays
 
-## 📄 License
+## License
 
 This project is created as a take-home assessment and is for demonstration purposes.
 
-## 🤝 Contact
+## Contact
 
 For questions or clarifications about this implementation, please reach out to the assessment coordinator.
 
