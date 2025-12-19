@@ -10,13 +10,13 @@ class Settings:
     
     # API Keys
     LTA_API_KEY: str = os.getenv("LTA_API_KEY", "")
-    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
     
     # LTA DataMall API Configuration
-    LTA_BASE_URL: str = "http://datamall2.mytransport.sg/ltaodataservice"
+    LTA_BASE_URL: str = "https://datamall2.mytransport.sg/ltaodataservice"
     
     # API Endpoints
-    BUS_ARRIVAL_ENDPOINT: str = f"{LTA_BASE_URL}/BusArrivalv2"
+    BUS_ARRIVAL_ENDPOINT: str = f"{LTA_BASE_URL}/v3/BusArrival"
     BUS_SERVICES_ENDPOINT: str = f"{LTA_BASE_URL}/BusServices"
     BUS_ROUTES_ENDPOINT: str = f"{LTA_BASE_URL}/BusRoutes"
     BUS_STOPS_ENDPOINT: str = f"{LTA_BASE_URL}/BusStops"
@@ -24,7 +24,7 @@ class Settings:
     TRAFFIC_SPEED_BANDS_ENDPOINT: str = f"{LTA_BASE_URL}/TrafficSpeedBandsv2"
     
     # Agent Configuration
-    MODEL_NAME: str = "gemini-pro"
+    MODEL_NAME: str = "llama-3.3-70b-versatile"
     MODEL_TEMPERATURE: float = 0.0
     MAX_ITERATIONS: int = 5
     

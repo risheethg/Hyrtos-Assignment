@@ -90,11 +90,23 @@ class LTARepository:
         try:
             all_stops = []
             skip = 0
+            batch_size = 500
             
-            # Fetch first batch
-            result = await self.get_bus_stops(skip=skip)
-            stops = result.get("value", [])
-            all_stops.extend(stops)
+            while True:
+                # Fetch batch
+                result = await self.get_bus_stops(skip=skip)
+                stops = result.get("value", [])
+                
+                if not stops:
+                    break
+                    
+                all_stops.extend(stops)
+                
+                # If we got fewer than batch_size, we've reached the end
+                if len(stops) < batch_size:
+                    break
+                    
+                skip += batch_size
             
             # Search in fetched stops
             query_lower = query.lower()

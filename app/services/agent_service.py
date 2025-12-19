@@ -2,7 +2,7 @@
 from typing import Dict, Any, TypedDict, Annotated, Sequence
 import operator
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolExecutor
 from langchain.tools import Tool
@@ -31,10 +31,10 @@ class TransportAgent:
     def __init__(self):
         """Initialize the transport agent."""
         self.transport_service = TransportService()
-        self.llm = ChatGoogleGenerativeAI(
+        self.llm = ChatGroq(
             model=settings.MODEL_NAME,
             temperature=settings.MODEL_TEMPERATURE,
-            google_api_key=settings.GEMINI_API_KEY
+            groq_api_key=settings.GROQ_API_KEY
         )
         self.workflow = self._build_workflow()
     

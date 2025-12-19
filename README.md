@@ -400,14 +400,14 @@ jobs:
 
 ## Evaluation Criteria Coverage
 
-### 1. Agentic Workflow Design ✅
+### 1. Agentic Workflow Design
 
 - Multi-step LangGraph workflow with clear node responsibilities
 - State management between workflow steps
 - Conditional logic based on intent classification
 - Modular design allowing easy improvements
 
-### 2. Variety of Inputs ✅
+### 2. Variety of Inputs
 
 The simulation includes diverse contexts:
 - **Weather**: Rain, thunderstorm, fog, clear, sunny
@@ -416,7 +416,7 @@ The simulation includes diverse contexts:
 - **Special Events**: National Day, F1, Chinese New Year, exams, school holidays
 - **Days**: Weekdays, weekends, public holidays
 
-### 3. Solution Structure ✅
+### 3. Solution Structure
 
 - Clean layered architecture (routes, models, services, repos, core)
 - Separation of concerns
@@ -424,7 +424,7 @@ The simulation includes diverse contexts:
 - Pydantic for type safety
 - Comprehensive error handling
 
-### 4. Documentation ✅
+### 4. Documentation
 
 - Inline code comments
 - Jupyter notebook with explanations
@@ -432,7 +432,7 @@ The simulation includes diverse contexts:
 - Usage examples
 - Comprehensive README
 
-### 5. Deployment Understanding ✅
+### 5. Deployment Understanding
 
 - Containerization strategy
 - Cloud deployment options
